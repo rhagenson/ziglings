@@ -18,12 +18,14 @@ const Elephant = struct {
 
 pub fn main() void {
     var elephantA = Elephant{ .letter = 'A' };
+    var elephantB = Elephant{ .letter = 'B' };
     // (Please add Elephant B here!)
     var elephantC = Elephant{ .letter = 'C' };
 
     // Link the elephants so that each tail "points" to the next elephant.
     // They make a circle: A->B->C->A...
     elephantA.tail = &elephantB;
+    elephantB.tail = &elephantC;
     // (Please link Elephant B's tail to Elephant C here!)
     elephantC.tail = &elephantA;
 
